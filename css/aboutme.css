@@ -1,0 +1,9 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body #kevinPic01 {
+    max-height: 200px;
+    max-width: auto;
+}
