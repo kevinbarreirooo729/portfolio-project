@@ -76,7 +76,7 @@ function isValidPassword() {
         passworErrorMsg += '<li>Must be at least 6 characters long.</li>';
         isValid = false;
     };
-    if (!(hasUpperCase(password) || hasLowerCase(password))) {
+    if (!(hasUpperCase(password) && hasLowerCase(password))) {
         passwordErrorMsg += '<li>Must contain at least 1 lower case letter' +
             'and 1 upper case letter.</li>';
         isValid = false;
@@ -85,11 +85,85 @@ function isValidPassword() {
         passwordErrorMsg += '<li>Must contain at least 2 numbers.</li>';
         isValid = false;
     };
-    if (!hasSpecialCharacters(password)) {
+    if (!hasSpecialCharacter(password)) {
         passwordErrorMsg += '<li>Must contain at least 1 special character' +
             '(one of !@#$%^&*?_~,./<>?-=_+()[]{};:`|\"\').</li>';
         isValid = false;
     };
+};
+
+/**
+ * hasUpperCase() checks if a String contains at least one upper case character.
+ * 
+ * @param {String} str 
+ */
+
+function hasUpperCase(str) {
+    let validStr = false;
+    for (let c = 0; c < str.length; c++) {
+        if (str[c] === str[c].toUpperCase()) {
+            validStr = true;
+        };
+    };
+
+    return validStr;
+};
+
+/**
+ * hasLowerCase() checks if a String contains at least one upper case character.
+ * 
+ * @param {String} str 
+ */
+
+function hasLowerCase(str) {
+    let validStr = false;
+    for (let c = 0; c < str.length; c++) {
+        if (str[c] === str[c].toLowerCase()) {
+            validStr = true;
+        };
+    };
+
+    return validStr;
+};
+
+/**
+ * hasTwoNumbers() checks if a String has at least two numbers.
+ * 
+ * @param {String} str 
+ */
+
+function hasTwoNumbers(str) {
+    let validStr;
+    let numCount = 0;
+    for (let c = 0; c < str.length; c++) {
+        if (str[c] > '0' && str[c] < '9') numCount++;
+    };
+
+    (numCount >= 2) ? validStr = true: validStr = false;
+
+    return validStr;
+};
+
+/**
+ * hasSpecialCharacter() checks if a String contains a special character.
+ * Special characters include: !@#$%^&*?_~,./<>?-=_+()[]{};:`|"'
+ * 
+ * @param {String} str 
+ */
+
+function hasSpecialCharacter(str) {
+    let validStr = false;
+    let specialChars = '!@#$%^&*?_~,./<>?-=_+()[]{};:`|\"\'';
+
+    // Iterate through str
+    for (let c = 0; c < str.length; c++) {
+        // Iterate through specialChars
+        for (let sc = 0; sc < specialChars.length; sc++) {
+            if (str[c] == specialChars[sc]) isValid = true;
+        };
+    };
+
+    return validStr;
 };
 
 /**
