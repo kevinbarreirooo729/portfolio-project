@@ -1,5 +1,5 @@
-var errorMsg = '<h3>Please enter valid information for the following fields:</h3><ul>';
 var isValid = true;
+var errorMsg = '<h3>Please enter valid information for the following fields:</h3><ul>';
 var formElements = document.getElementById('contactMeForm').elements;
 
 /**
@@ -8,6 +8,7 @@ var formElements = document.getElementById('contactMeForm').elements;
  */
 
 function isValidForm() {
+    errorMsg = '<h3>Please enter valid information for the following fields:</h3><ul>';
     hasEmptyField();
     isValidEmail();
     isValidPassword();
@@ -41,6 +42,8 @@ function hasEmptyField() {
 
         // Append to the error message. 
         for (let e = 0; e < invalidFormElements.length; e++) {
+            if (invalidFormElements[e].name.toLowerCase() == 'password' ||
+                invalidFormElements[e].name.toLowerCase() == 'email') continue;
             errorMsg += '<li>' + invalidFormElements[e].name + '</li>';
         };
 
@@ -71,13 +74,13 @@ function isValidPassword() {
     // Check for a valid password. 
     var password = document.getElementById('password').value;
 
-    var passwordErrorMsg = '<ul>';
+    var passwordErrorMsg = '<h4>Invalid Password</h4><ul>';
     if (password.length < 6) {
-        passworErrorMsg += '<li>Must be at least 6 characters long.</li>';
+        passwordErrorMsg += '<li>Must be at least 6 characters long.</li>';
         isValid = false;
     };
     if (!(hasUpperCase(password) && hasLowerCase(password))) {
-        passwordErrorMsg += '<li>Must contain at least 1 lower case letter' +
+        passwordErrorMsg += '<li>Must contain at least 1 lower case letter ' +
             'and 1 upper case letter.</li>';
         isValid = false;
     };
@@ -85,11 +88,25 @@ function isValidPassword() {
         passwordErrorMsg += '<li>Must contain at least 2 numbers.</li>';
         isValid = false;
     };
-    if (!hasSpecialCharacter(password)) {
-        passwordErrorMsg += '<li>Must contain at least 1 special character' +
+    if (!hasSpecialChar(password)) {
+        passwordErrorMsg += '<li>Must contain at least 1 special character ' +
             '(one of !@#$%^&*?_~,./<>?-=_+()[]{};:`|\"\').</li>';
         isValid = false;
     };
+
+    // Display password strength in contactme.html 
+    if (password.length < 6) {
+        document.getElementById('pwStrengthMeter').innerHTML = 'Password Strength: Weak';
+    } else if (password.length >= 6 && password.length <= 10 && hasTwoNumbers(password) && hasUpperCase(password) &&
+        hasLowerCase(password) && hasSpecialChar(password)) {
+        document.getElementById('pwStrengthMeter').innerHTML = 'Password Strength: Medium';
+    } else if (password.length >= 11 && hasTwoNumbers(password) && hasUpperCase(password) &&
+        hasLowerCase(password) && hasSpecialChar(password)) {
+        document.getElementById('pwStrengthMeter').innerHTML = 'Password Strength: Strong';
+    };
+
+    passwordErrorMsg += '</ul>';
+    errorMsg += passwordErrorMsg;
 };
 
 /**
@@ -151,7 +168,7 @@ function hasTwoNumbers(str) {
  * @param {String} str 
  */
 
-function hasSpecialCharacter(str) {
+function hasSpecialChar(str) {
     let validStr = false;
     let specialChars = '!@#$%^&*?_~,./<>?-=_+()[]{};:`|\"\'';
 
@@ -173,5 +190,5 @@ function hasSpecialCharacter(str) {
 var $j = jQuery.noConflict();
 
 $j('document').ready(function () {
-    $j('#datePicker').datepicker();
+    $j('#date').datepicker();
 });
