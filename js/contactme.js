@@ -198,6 +198,15 @@ function hasSpecialChar(str) {
 };
 
 /**
+ * updateCommentCount() updates count that tracks the number of characters in
+ * a textarea. 
+ */
+
+function updateCommentCount() {
+    document.getElementById('commentCount').value = document.getElementById('comments').value.length;
+};
+
+/**
  * jQuery code. 
  */
 

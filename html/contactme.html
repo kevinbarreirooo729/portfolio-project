@@ -29,8 +29,11 @@
         <input type="password" name="password" id="password"><br>
         <div id="pwStrengthMeter"></div>
         <label for="comments">Comments</label><br>
-        <textarea name="comments" id="comments" onfocus="if (this.value == 'message...') this.value = '';"
-            onblur="if (this.value == '') this.value = 'message...';">message...</textarea><br>
+        <textarea name="comments" id="comments"
+            onfocus="if (this.value == 'message...') this.value = ''; updateCommentCount();"
+            onblur="if (this.value == '') this.value = 'message...'; updateCommentCount();"
+            onkeyup="updateCommentCount();">message...</textarea>
+        <input type="text" name="commentCount" id="commentCount" size="4" disabled><br>
         <input type="submit" value="submit" id="submit" onclick="return isValidForm();">
     </form>
 
