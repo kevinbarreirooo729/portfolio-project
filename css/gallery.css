@@ -3,3 +3,13 @@ Google Fonts
 font-family: 'Open Sans', sans-serif;
 font-family: 'Work Sans', sans-serif;
 */
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+#feet-img, #dry-leaf-img, #wood-img, #stone-img, #trees-and-sky-img {
+    max-height: 400px;
+    max-width: auto;
+}
