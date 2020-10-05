@@ -4,7 +4,7 @@
     - An email address (validate using a regular expression) - DONE
     - A date using a JavaScript pop-up calendar (jQuery can be used) - DONE
     - A password with a JavaScript password strength meter (See Password Tips for more information) - DONE
-    - A comments box that limits input to 500 characters with a running count of characters input
+    - A comments box that limits input to 500 characters with a running count of characters input - DONE
     - Use http://ss1.ciwcertified.com/cgi-bin/process.pl as the action for the form and include the novalidate
         attribute in the <form> tag.  - DONE
     - Use contactme.html as the filename for the Contact Me page. - DONE
