@@ -16,6 +16,8 @@ function startGallery() {
         };
         totalPics++;
     };
+
+    setInterval(nextPicture, 5000);
 };
 
 function nextPicture() {
