@@ -11,7 +11,6 @@ if (document.cookie.split('; ')[0].split('=')[0] == 'username') {
 
     // Store the cookie in a key=value array for each cookie. 
     var cookies = document.cookie.split('; ');
-    alert('cookies: ' + cookies);
     var usernameCookie = cookies[0].split('=');
     var visitCountCookie = cookies[1].split('=');
 
@@ -35,10 +34,8 @@ if (document.cookie.split('; ')[0].split('=')[0] == 'username') {
     username = prompt('Enter your name.');
     // Creates a username cookie. 
     document.cookie = 'username=' + username + '; expires=' + cookieExpiration;
-    alert(document.cookie);
     // Creates a visit count cookie. 
     document.cookie = 'visitCount=1;' + ' expires=' + cookieExpiration;
-    alert(document.cookie);
     // Display a welcome message in index.html. 
     document.getElementById('welcome-message').innerHTML += 'Greetings, ' + username + '!';
 };
