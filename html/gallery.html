@@ -4,15 +4,24 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta id="gallery">
 
     <title>Gallery | Kevin Barreiro</title>
 
     <link href="../css/gallery.css" rel="stylesheet">
 
     <script src="../js/nav.js"></script>
+    <script> 
+        window.onload = function () {
+            startGallery();
+            setNav();
+        };
+    </script>
 </head>
 
 <body>
+    <nav id="nav"></nav>
+
     <h1>Gallery</h1>
 
     <img src="../images/feet.png" alt="A picture of grass and the feet of Kevin Barreiro." id="feet-img">

@@ -35,5 +35,3 @@ function previousPicture() {
     };
     gallery[currentPic].style.display = 'block';
 };
-
-window.onload = startGallery;
