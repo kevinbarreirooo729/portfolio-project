@@ -56,6 +56,29 @@ body #kevinPic01 {
     display: block;
     max-height: 200px;
     max-width: auto;
-    margin: 0 auto;
+    margin: 0 auto 5% auto;
     border-radius: 10px;
+}
+
+body h2 {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 2.5em;
+    font-weight: bold;
+    text-align: center;
+    margin: 0 auto 2.5% auto;
+    background-color: rgb(34, 34, 34);
+    width: 45%;
+    padding: 1%;
+    border-radius: 10px;
+}
+
+body ol {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: rgb(34, 34, 34);
+    width: 30%;
+    margin: 0 auto 2.5% auto;
+    list-style-position: inside;
+    list-style-type: upper-roman;
 }
