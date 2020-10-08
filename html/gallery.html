@@ -11,7 +11,7 @@
     <link href="../css/gallery.css" rel="stylesheet">
 
     <script src="../js/nav.js"></script>
-    <script> 
+    <script>
         window.onload = function () {
             startGallery();
             setNav();
@@ -24,14 +24,17 @@
 
     <h1>Gallery</h1>
 
-    <img src="../images/feet.png" alt="A picture of grass and the feet of Kevin Barreiro." id="feet-img">
-    <img src="../images/dry-leaf.png" alt="A picture of a dry leaf in black and white." id="dry-leaf-img">
-    <img src="../images/wood.png" alt="A picture of the main trunk of a baby tree." id="wood-img">
-    <img src="../images/stone.png" alt="A picture of stone in black and white." id="stone-img">
-    <img src="../images/trees-and-sky.png" alt="A picture of trees and the sky." id="trees-and-sky-img">
+    <div id="slide">
+        <button type="button" id="previous-button">&nbsp;&lt;&nbsp;</button>
 
-    <button type="button" id="previous-button">Previous</button>
-    <button type="button" id="next-button">Next</button>
+        <img src="../images/feet.png" alt="A picture of grass and the feet of Kevin Barreiro." id="feet-img">
+        <img src="../images/dry-leaf.png" alt="A picture of a dry leaf in black and white." id="dry-leaf-img">
+        <img src="../images/wood.png" alt="A picture of the main trunk of a baby tree." id="wood-img">
+        <img src="../images/stone.png" alt="A picture of stone in black and white." id="stone-img">
+        <img src="../images/trees-and-sky.png" alt="A picture of trees and the sky." id="trees-and-sky-img">
+
+        <button type="button" id="next-button">&nbsp;&gt;&nbsp;</button>
+    </div>
 
     <script src="../js/gallery.js"></script>
 </body>
