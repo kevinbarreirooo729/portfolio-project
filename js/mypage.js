@@ -1,8 +1,6 @@
 // Typed.js Repo:
 // https://github.com/mattboldt/typed.js
 
-var isDoneTyping = false;
-
 window.onload = function () {
     setNav();
 

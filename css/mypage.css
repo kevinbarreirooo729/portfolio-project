@@ -7,4 +7,68 @@ font-family: 'Work Sans', sans-serif;
 * {
     padding: 0;
     margin: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #EBE9D8;
+    color: #EB4831;
+}
+
+
+body #nav {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1.5em;
+    height: 2.5em;
+    line-height: 2.5em;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0%;
+    margin: 0 0 2.5% 0;
+    background-color: rgb(34, 34, 34);
+    z-index: 1;
+}
+
+body #nav ul li {
+    display: inline-block;
+    list-style-position: inside;
+    list-style-type: none;
+}
+
+body #nav a {
+    text-decoration: none;
+    margin: 0 0 0 1.5em;
+    padding: 0.3em 0.5em 0.3em 0.5em;
+    color: #EB4831;
+}
+
+body #nav a:hover {
+    color: #ff5c47;
+}
+
+body #verse-typed {
+    font-family: 'Work Sans', sans-serif;
+    width: 50%;
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    margin: 5% auto 0 auto;
+    line-height: 1.8em;
+    color: #EB4831;
+}
+
+body #bible-link {
+    text-decoration: none;
+    font-size: 2em;
+    background-color: rgb(34, 34, 34);
+    color: #EB4831;
+    padding: 1%;
+    border-radius: 10px;
+    position: relative;
+    top: 50px;
+}
+
+body #bible-link:hover {
+    background-color: rgb(17, 17, 17);
+    color: #b83827;
 }

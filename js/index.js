@@ -25,8 +25,7 @@ if (document.cookie.split('; ')[0].split('=')[0] == 'username') {
     document.cookie = 'visitCount=' + visitCount;
 
     // Display the greetings and the visit count. 
-    document.getElementById('welcome-message').innerHTML += 'Greetings, ' + cookieUsername +
-        '!<br>This is visit number ' + visitCount + '.';
+    document.getElementById('welcome-message').innerHTML = `<p>Greetings, ${cookieUsername}!<br>This is visit number ${visitCount}.</p>`;
 } else {
     // This portion runs if the user has never visited the page. i.e. cookies don't exist. 
 
@@ -36,17 +35,20 @@ if (document.cookie.split('; ')[0].split('=')[0] == 'username') {
     document.cookie = 'username=' + username + '; expires=' + cookieExpiration;
     // Creates a visit count cookie. 
     document.cookie = 'visitCount=1;' + ' expires=' + cookieExpiration;
+
     // Display a welcome message in index.html. 
-    document.getElementById('welcome-message').innerHTML += 'Greetings, ' + username + '!';
+    document.getElementById('welcome-message').innerHTML =  `<p>Greetings, ${username}!</p>`;
 };
 
-// Algorithm Pseudocode - 
-// if its the users first time on the home page
-// prompt for username
-// display "Greetings, " + username
-// create a cookie with "username=" + username
-// else
-// do not prompt for username
-// obtain the username from the stored cookie
-// display "Greetings, " + username + number of times this
-// this user has visited the home page. 
+
+/** Algorithm Pseudocode - 
+    if its the users first time on the home page
+        prompt for username
+        display "Greetings, " + username
+        create a cookie with "username=" + username
+    else
+        do not prompt for username
+        obtain the username from the stored cookie
+        display "Greetings, " + username + number of times this
+        this user has visited the home page.
+*/
