@@ -7,6 +7,7 @@ font-family: 'Work Sans', sans-serif;
 * {
     padding: 0;
     margin: 0;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -25,6 +26,7 @@ body #nav {
     top: 0%;
     margin: 0 0 2.5% 0;
     background-color: rgb(34, 34, 34);
+    z-index: 1;
 }
 
 body #nav ul li {
@@ -50,6 +52,29 @@ body h1 {
     font-weight: bold;
     text-align: center;
     margin: 0 0 2.5% 0;
+}
+
+body #formErrorMsg {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: rgb(34, 34, 34);
+    width: 50%;
+    margin: 0 auto;
+    list-style-position: inside;
+}
+
+body #invalid-form-ul,
+body #invalid-form-pw {
+    list-style-type: square;
+}
+
+body #invalid-form-h3 {
+    background-color:  rgb(34, 34, 34);
+    color: #EB4831;
+    margin: 0 0 1.5% 0;
+    padding: 1%;
+    border-radius: 10px;
 }
 
 body #contactMeForm {
@@ -81,15 +106,47 @@ body input {
     font-weight: bold;
 }
 
+body #pwStrengthMeter {
+    position: relative;
+    bottom: 25px;
+    left: 100px;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1em;
+    font-weight: bold;
+    color: rgb(34, 34, 34);
+}
+
 body textarea {
-    margin: 2.5% 0;
+    margin: 5% 0 0 0;
+    padding: 1%;
     font-size: 2em;
+    resize: none;
+    font-size: 2em;
+    background-color: #EBE9D8;
+    color: rgb(34, 34, 34);
+    border-radius: 10px;
+    border-color: rgb(34, 34, 34);
+    border-width: 5px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
 }
 
-body #firstNameLabel {
-    margin: 0 17% 0 0;
+body #commentCount {
+    font-size: 1.5em;
+    background-color: rgb(34, 34, 34);
+    border-width: 1px;
+    color: #EB4831;
+    margin: 1% 0 0 70%;
 }
 
-body #firstNameLabel {
-    margin-left: 0 0 0 2%;
+body #submit {
+    background-color: rgb(34, 34, 34);
+    color: #EB4831;
+    border-width: 1px;
+    margin: 20% 0 0 0;
+}
+
+body #submit:hover {
+    background-color: rgb(17, 17, 17);
+    color: #b83827;
 }

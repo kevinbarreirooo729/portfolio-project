@@ -1,5 +1,5 @@
 var isValid = true;
-var errorMsg = '<h3>Please enter valid information for the following fields:</h3><ul>';
+var errorMsg = '<h3 id="invalid-form-h3">Please enter valid information for the following field(s):</h3><ul id="invalid-form-ul">';
 var formElements = document.getElementById('contactMeForm').elements;
 
 /**
@@ -8,7 +8,7 @@ var formElements = document.getElementById('contactMeForm').elements;
  */
 
 function isValidForm() {
-    errorMsg = '<h3>Please enter valid information for the following fields:</h3><ul>';
+    errorMsg = '<h3 id="invalid-form-h3">Please enter valid information for the following field(s):</h3><ul id="invalid-form-ul">';
     hasEmptyField();
     isValidEmail();
     isValidPassword();
@@ -16,6 +16,12 @@ function isValidForm() {
     // Write the error message to contactme.html 
     errorMsg += '</ul>';
     document.getElementById('formErrorMsg').innerHTML = errorMsg;
+
+
+    // Scroll the page to the top for Safari. 
+    document.body.scrollTop = 0;
+    // Scroll the page to the top for IE, Firefox, Chrome, and Opera. 
+    document.documentElement.scrollTop = 0;
 
     return isValid;
 };
@@ -74,7 +80,7 @@ function isValidPassword() {
     // Check for a valid password. 
     var password = document.getElementById('password').value;
 
-    var passwordErrorMsg = '<h4>Invalid Password</h4><ul>';
+    var passwordErrorMsg = '<h4>Invalid Password</h4><ul id="invalid-form-pw">';
     if (password.length < 6) {
         passwordErrorMsg += '<li>Must be at least 6 characters long.</li>';
         isValid = false;

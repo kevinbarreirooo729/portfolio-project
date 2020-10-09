@@ -29,6 +29,7 @@ body #nav {
     top: 0%;
     margin: 0 0 15% 0;
     background-color: rgb(34, 34, 34);
+    z-index: 1;
 }
 
 body #nav ul li {
