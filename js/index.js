@@ -1,5 +1,6 @@
 var username;
 
+// Set cookie expiration time. 
 var cookieExpiration = new Date().toUTCString + 60 * 60000;
 // 60 is the amount of minutes in 1 hour. 
 // 60000 is the amount of milleseconds in 1 minute. 
@@ -22,24 +23,27 @@ if (document.cookie.split('; ')[0].split('=')[0] == 'username') {
     // Increase the visit count by 1. 
     visitCount = parseInt(visitCount);
     visitCount++;
-    document.cookie = 'visitCount=' + visitCount;
+    document.cookie = `visitCount=${visitCount}`;
 
     // Display the greetings and the visit count. 
-    document.getElementById('welcome-message').innerHTML = `<p>Greetings, ${cookieUsername}!<br>This is visit number ${visitCount}.</p>`;
+    document.getElementById('welcome-message').innerHTML = `Greetings, ${cookieUsername}!<br>This is visit number ${visitCount}.`;
 } else {
     // This portion runs if the user has never visited the page. i.e. cookies don't exist. 
 
     // Prompts the user for their name.
     username = prompt('Enter your name.');
     // Creates a username cookie. 
-    document.cookie = 'username=' + username + '; expires=' + cookieExpiration;
+    document.cookie = `username=${username}`;
     // Creates a visit count cookie. 
-    document.cookie = 'visitCount=1;' + ' expires=' + cookieExpiration;
+    document.cookie = 'visitCount=1';
+    // Page cookie
+    document.cookie = "page=index"
+    // Creates expires cookie
+    document.cookie = `expires=${cookieExpiration}`;
 
     // Display a welcome message in index.html. 
-    document.getElementById('welcome-message').innerHTML =  `<p>Greetings, ${username}!</p>`;
+    document.getElementById('welcome-message').innerHTML = `Greetings, ${username}!`;
 };
-
 
 /** Algorithm Pseudocode - 
     if its the users first time on the home page

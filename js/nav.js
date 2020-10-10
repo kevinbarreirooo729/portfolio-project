@@ -35,38 +35,38 @@ function setNav() {
 
     if (indexPage) {
         // Add each path to navList as an unordered list.
-        navList += `<li><a href="${nav[0][0]}">Gallery</a></li>`;
-        navList += `<li><a href="${nav[0][1]}">About Me</a></li>`;
-        navList += `<li><a href="${nav[0][2]}">Contact Me</a></li>`;
-        navList += `<li><a href="${nav[0][3]}">My Page</a></li>`;
+        navList += `<li><a href="${nav[0][0]}" target="_top">Gallery</a></li>`;
+        navList += `<li><a href="${nav[0][1]}" target="_top">About Me</a></li>`;
+        navList += `<li><a href="${nav[0][2]}" target="_top">Contact Me</a></li>`;
+        navList += `<li><a href="${nav[0][3]}" target="_top">My Page</a></li>`;
         navList += '</ul>';
     } else if (galleryPage) {
         // Add each path to navList as an unordered list.
-        navList += `<li><a href="${nav[1][0]}">Home</a></li>`;
-        navList += `<li><a href="${nav[1][1]}">About Me</a></li>`;
-        navList += `<li><a href="${nav[1][2]}">Contact Me</a></li>`;
-        navList += `<li><a href="${nav[1][3]}">My Page</a></li>`;
+        navList += `<li><a href="${nav[1][0]}" target="_top">Home</a></li>`;
+        navList += `<li><a href="${nav[1][1]}" target="_top">About Me</a></li>`;
+        navList += `<li><a href="${nav[1][2]}" target="_top">Contact Me</a></li>`;
+        navList += `<li><a href="${nav[1][3]}" target="_top">My Page</a></li>`;
         navList += '</ul>';
     } else if (aboutmePage) {
         // Add each path to navList as an unordered list.
-        navList += `<li><a href="${nav[2][0]}">Home</a></li>`;
-        navList += `<li><a href="${nav[2][1]}">Gallery</a></li>`;
-        navList += `<li><a href="${nav[2][2]}">Contact Me</a></li>`;
-        navList += `<li><a href="${nav[2][3]}">My Page</a></li>`;
+        navList += `<li><a href="${nav[2][0]}" target="_top">Home</a></li>`;
+        navList += `<li><a href="${nav[2][1]}" target="_top">Gallery</a></li>`;
+        navList += `<li><a href="${nav[2][2]}" target="_top">Contact Me</a></li>`;
+        navList += `<li><a href="${nav[2][3]}" target="_top">My Page</a></li>`;
         navList += '</ul>';
     } else if (contactmePage) {
         // Add each path to navList as an unordered list.
-        navList += `<li><a href="${nav[3][0]}">Home</a></li>`;
-        navList += `<li><a href="${nav[3][1]}">Gallery</a></li>`;
-        navList += `<li><a href="${nav[3][2]}">About Me</a></li>`;
-        navList += `<li><a href="${nav[3][3]}">My Page</a></li>`;
+        navList += `<li><a href="${nav[3][0]}" target="_top">Home</a></li>`;
+        navList += `<li><a href="${nav[3][1]}" target="_top">Gallery</a></li>`;
+        navList += `<li><a href="${nav[3][2]}" target="_top">About Me</a></li>`;
+        navList += `<li><a href="${nav[3][3]}" target="_top">My Page</a></li>`;
         navList += '</ul>';
     } else if (mypagePage) {
         // Add each path to navList as an unordered list.
-        navList += `<li><a href="${nav[4][0]}">Home</a></li>`;
-        navList += `<li><a href="${nav[4][1]}">Gallery</a></li>`;
-        navList += `<li><a href="${nav[4][2]}">About Me</a></li>`;
-        navList += `<li><a href="${nav[4][3]}">Contact Me</a></li>`;
+        navList += `<li><a href="${nav[4][0]}" target="_top">Home</a></li>`;
+        navList += `<li><a href="${nav[4][1]}" target="_top">Gallery</a></li>`;
+        navList += `<li><a href="${nav[4][2]}" target="_top">About Me</a></li>`;
+        navList += `<li><a href="${nav[4][3]}" target="_top">Contact Me</a></li>`;
         navList += '</ul>';
     };
 
