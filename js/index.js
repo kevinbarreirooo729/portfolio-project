@@ -36,8 +36,6 @@ if (document.cookie.split('; ')[0].split('=')[0] == 'username') {
     document.cookie = `username=${username}`;
     // Creates a visit count cookie. 
     document.cookie = 'visitCount=1';
-    // Page cookie
-    document.cookie = "page=index"
     // Creates expires cookie
     document.cookie = `expires=${cookieExpiration}`;
 
